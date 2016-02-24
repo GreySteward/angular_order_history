@@ -6,13 +6,13 @@ console.log('angular working');
 //injecting dependencies into our controller
 myApp.controller('customerController', ['$scope', '$http', function($scope, $http) {
 
-    $scope.$on('$viewContentLoaded', function() {
-        customers();
-    });
+    //$scope.$on('$viewContentLoaded', function() {
+    //    customers();
+    //});
 
     console.log('controller firing');
 
-    $scope.customers = function () {
+    //$scope.customers = function () {
         console.log('inside function');
         $http({
             method: 'GET',
@@ -21,5 +21,6 @@ myApp.controller('customerController', ['$scope', '$http', function($scope, $htt
             var data = response.data;
             console.log(data);
         });
-    };
-}]);
+    //}
+    }
+]);

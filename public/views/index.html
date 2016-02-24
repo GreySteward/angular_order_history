@@ -4,18 +4,18 @@
     <title>Angular Order History</title>
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
     <script type="text/javascript" src="/scripts/clientapp.js"></script>
-    <script type="text/javascript" src="/scripts/customerTable.js"></script>
+    <!--<script type="text/javascript" src="/scripts/customerTable.html"></script>-->
     <link rel="stylesheet" href="/vendors/bootstrap.min.css">
     <meta charset="utf-8">
 </head>
 <body ng-app="myApp">
 
 <h1>Angular Customer Order List</h1>
-
-<div ng-controller=“customerController">
+<!--ng-init="$scope.customers()"-->
+<div ng-controller="customerController">
 
         <div class="customer" ng-repeat="customer in table">
-            <customer-table info="customer"></customer-table>
+            <!--<customer-table info="customer"></customer-table>-->
         </div>
     </div>
 </body>

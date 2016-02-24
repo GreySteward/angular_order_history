@@ -4,7 +4,7 @@
     <title>Angular Order History</title>
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
     <script type="text/javascript" src="/scripts/clientapp.js"></script>
-    <!--<script type="text/javascript" src="/scripts/customerTable.html"></script>-->
+    <script type="text/javascript" src="/scripts/customerTable.js"></script>
     <link rel="stylesheet" href="/vendors/bootstrap.min.css">
     <meta charset="utf-8">
 </head>
@@ -15,7 +15,7 @@
 <div ng-controller="customerController">
 
         <div class="customer" ng-repeat="customer in table">
-            <!--<customer-table info="customer"></customer-table>-->
+            <customer-table info="customer"></customer-table>
         </div>
     </div>
 </body>

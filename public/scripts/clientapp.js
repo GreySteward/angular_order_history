@@ -18,7 +18,7 @@ myApp.controller('customerController', ['$scope', '$http', function($scope, $htt
             method: 'GET',
             url: '/getCustomers'
         }).then(function (response) {
-            var data = response.data;
+            $scope.data = response.data;
             console.log(data);
         });
     //}

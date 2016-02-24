@@ -35,25 +35,25 @@ router.get('/', function(req, res) {
     });
 });
 
-//router.get('/', function(req, res) {
-//        var results = [];
-//        pg.connect(connectionString, function(err, client, done) {
-//            var query = client.query('SELECT * FROM customers JOIN addresses ON customers.id = addresses.customer_id JOIN orders ON addresses.customer_id = orders.address_id');
-//
-//            query.on('row', function(row) {
-//                results.push(row);
-//                console.log(results);
-//            });
-//
-//            query.on('end', function() {
-//                client.end();
-//                return res.json(results);
-//            });
-//
-//            if(err) {
-//                console.log(err);
-//            }
-//        });
-//});
+router.get('/', function(req, res) {
+        var results = [];
+        pg.connect(connectionString, function(err, client, done) {
+            var query = client.query('SELECT * FROM customers JOIN addresses ON customers.id = addresses.customer_id JOIN orders ON addresses.customer_id = orders.address_id');
+
+            query.on('row', function(row) {
+                results.push(row);
+                console.log(results);
+            });
+
+            query.on('end', function() {
+                client.end();
+                return res.json(results);
+            });
+
+            if(err) {
+                console.log(err);
+            }
+        });
+});
 
 module.exports = router;

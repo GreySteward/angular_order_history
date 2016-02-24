@@ -1,11 +1,9 @@
-<div class="customer" ng-repeat="customer in table">
-    <p>{{'customers()'}}</p>
-    <p>{{info.firstName}}</p>
-    <p>{{info.lastName}}</p>
-    <div ng-if="//if customer has an order// != 'null'">
-        <button ng-click="some function()"></button>
-    </div>
+<div ng-repeat="customer in data">
+    <!--<p>{{'customers()'}}</p>-->
+    <p>{{customer.first_name}}</p>
+    <p>{{customer.last_name}}</p>
+    <!--<div ng-if="//if customer has an order// != 'null'">-->
+        <!--<button ng-click="some function()"></button>-->
+    <!--</div>-->
 
 </div>
-
-

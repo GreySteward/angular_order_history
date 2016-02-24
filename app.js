@@ -1,13 +1,13 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-//var getCustomers = require('./routes/getCustomers');
+var getCustomers = require('./server/routes/getCustomers');
 
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-//app.use('/getCustomers', getCustomers);
+app.use('/getCustomers', getCustomers);
 
 app.use(express.static('public'));
 app.use(express.static('public/views'));
